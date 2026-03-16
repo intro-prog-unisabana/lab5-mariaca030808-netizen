@@ -1,3 +1,5 @@
+calificaciones =[85, 92, 78]
+
 def promedio_estudiante(calificaciones):
 
     if len(calificaciones)== 0:
