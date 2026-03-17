@@ -1,41 +1,17 @@
-import random
-
-def seed_secret_numbers(seed):
-    random.seed(seed)
-
-
-def generate_secret_number(start=1, end=100):
-    return random.randint(start, end)
-def input_response(secret_value, user_input):
-
-    if user_input < secret_value:
-        return "Too low! Try a higher number.", False
-
-    elif user_input > secret_value:
-        return "Too high! Try a lower number.", False
-
-    else:
-        return "Correct! You guessed the number!", True
-    
 from secret_number import seed_secret_numbers, generate_secret_number
 from response import input_response
 
-seed = int(input("Enter a seed number:\n"))
+seed = input("Enter a seed number:")
+seed_secret_numbers (seed)
+generated_value = generate_secret_number()
 
-seed_secret_numbers(seed)
+print(generated_value)
 
-secret = generate_secret_number()
-
-tries = 0
-correct = False
-
-while not correct:
-
-    guess = int(input("What is your guess:\n"))
-    tries += 1
-
-    message, correct = input_response(secret, guess)
-
-    print(message)
-
+correcto = False 
+tries= 0 
+while correcto !=True:
+    user_input = int(input("What is your guess:")) 
+    mensaje, correcto = input_response(generated_value, user_input)
+    print(mensaje)
+    tries += 1 
 print(f"It took you {tries} tries!")
