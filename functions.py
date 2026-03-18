@@ -6,7 +6,7 @@ def promedio_estudiante(calificaciones):
         return 0.0 
     total = 0 
     for calificación in calificaciones:
-        total = total + calificación
+        total= total + calificación
     promedio_total= total/ len(calificaciones)
     return float(promedio_total)
 

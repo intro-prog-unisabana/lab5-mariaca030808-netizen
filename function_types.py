@@ -6,7 +6,7 @@ def calc_avg(lista_float):
     total = 0
     for num in lista_float:
         total= total + num
-        promedio = total / len(lista_float)
+        promedio= total / len(lista_float)
         return promedio
     
 def print_normalized(lista_dada):
